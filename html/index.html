@@ -1,141 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Belajar 1 HTML</title>
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-      }
-      .container {
-        width: 80dvw;
-        border: 1px solid #333;
-        padding: 10px;
-        margin: 20px;
-      }
-      .card {
-        width: 200px;
-        padding: 20px;
-        margin: 20px;
-        background: #0088cc60;
-      }
-    </style>
-  </head>
 
-  <body>
-    <!-- Heading -->
-    <div class="container">
-      <h1>hallo saya belajar web</h1>
-      <h2>hallo saya belajar web</h2>
-      <h3>hallo saya belajar web</h3>
-      <h4>hallo saya belajar web</h4>
-      <h5>hallo saya belajar web</h5>
-      <h6>hallo saya belajar web</h6>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Belajar 1 HTML</title>
 
-    <!-- paragraf -->
-    <div class="container">
+  <!-- internal css -->
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      width: 80dvw;
+      border: 1px solid #333;
+      padding: 10px;
+      margin: 20px;
+    }
+
+    .card {
+      width: 200px;
+      padding: 20px;
+      margin: 20px;
+      background: #0088cc60;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Heading -->
+  <div class="container">
+    <h1>hallo saya belajar web</h1>
+    <h2>hallo saya belajar web</h2>
+    <h3>hallo saya belajar web</h3>
+    <h4>hallo saya belajar web</h4>
+    <h5>hallo saya belajar web</h5>
+    <h6>hallo saya belajar web</h6>
+  </div>
+
+  <!-- paragraf -->
+  <div class="container">
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ipsum
+      eius, tempore sed amet laudantium suscipit esse sit molestiae ab!
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ipsum
+      eius, tempore sed amet laudantium suscipit esse sit molestiae ab!
+    </p>
+    <br />
+    <p>Lorem ipsum dolor sit amet.</p>
+    <hr />
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis
+      accusantium, temporibus recusandae voluptatibus aliquid eum inventore
+      voluptatum cupiditate debitis, facilis quisquam earum numquam esse? Illo
+      tempore laudantium quia culpa unde.
+    </p>
+  </div>
+
+  <!-- hyperlink / tautan -->
+  <div class="container">
+    <p>
+      Ini akan mengarahkan ke halaman youtube, silakan
+      <!-- redirect menggunakan link -->
+      <a href="https://youtube.com" target="_blank">Klik Disini</a>
+    </p>
+    <p>
+      Ini akan mengarahkan ke halaman lain, silakan
+      <!-- redirect menggunakan link -->
+      <a href="about.html" title="dari halaman" target="_blank">Klik Disini</a>
+    </p>
+  </div>
+
+  <!-- tag untuk image. -->
+  <div class="container">
+    <!-- direct link published -->
+    <img src="https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg" width="200"
+      alt="Gambar contoh dari link" />
+    <!-- from storage -->
+    <img src="images/contoh.png" width="200" alt="Gambar contoh dari link" />
+  </div>
+
+  <!-- list -->
+  <div class="container">
+    <!-- unordered list -->
+    <p>Daftar mobil punya saya :</p>
+    <ul style="margin: 20px">
+      <li>MClaren</li>
+      <li>lambo</li>
+      <li>avanza</li>
+    </ul>
+
+    <!-- ordered list -->
+    <p>Daftar motor punya saya :</p>
+    <ol type="i" start="10" style="margin: 20px">
+      <li>Ninja</li>
+      <li>NSR</li>
+      <li>v-xion</li>
+    </ol>
+  </div>
+
+  <!-- area (div vs span) -->
+  <div class="container bg-white" id="namaId">
+    <div class="card">
+      <h4>Kartu 1</h4>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ipsum
-        eius, tempore sed amet laudantium suscipit esse sit molestiae ab!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+        perspiciatis corrupti odio natus similique ullam praesentium velit,
+        quam, distinctio minima molestiae iure amet voluptatibus!
+        Necessitatibus sequi fugit quis laboriosam veniam.
       </p>
+    </div>
+    <div class="card">
+      <p>Kartu 1</p>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ipsum
-        eius, tempore sed amet laudantium suscipit esse sit molestiae ab!
-      </p>
-      <br />
-      <p>Lorem ipsum dolor sit amet.</p>
-      <hr />
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis
-        accusantium, temporibus recusandae voluptatibus aliquid eum inventore
-        voluptatum cupiditate debitis, facilis quisquam earum numquam esse? Illo
-        tempore laudantium quia culpa unde.
+        Lorem ipsum dolor sit,
+        <span style="background-color: #0088cc">Lorem, ipsum.</span> amet
+        consectetur adipisicing elit. Dolorum, fuga!
       </p>
     </div>
+  </div>
 
-    <!-- hyperlink / tautan -->
-    <div class="container">
-      <p>
-        Ini akan mengarahkan ke halaman youtube, silakan
-        <!-- redirect menggunakan link -->
-        <a href="https://youtube.com" target="_blank">Klik Disini</a>
-      </p>
-      <p>
-        Ini akan mengarahkan ke halaman lain, silakan
-        <!-- redirect menggunakan link -->
-        <a href="about.html" target="_blank">Klik Disini</a>
-      </p>
-    </div>
+  <!-- multimedia -->
+  <div class="container">
+    <!-- <audio autoplay loop src="http://www.sousound.com/music/healing/healing_01.mp3"></audio> -->
 
-    <!-- tag untuk image. -->
-    <div class="container">
-      <!-- direct link published -->
-      <img
-        src="https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg"
-        width="200"
-        alt="Gambar contoh dari link"
-      />
-      <!-- from storage -->
-      <img src="images/contoh.png" width="200" alt="Gambar contoh dari link" />
-    </div>
+    <!-- <video autoplay width="200" loop muted
+      src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4">
+    </video> -->
 
-    <!-- list -->
-    <div class="container">
-      <!-- unordered list -->
-      <p>Daftar mobil punya saya :</p>
-      <ul style="margin: 20px">
-        <li>MClaren</li>
-        <li>lambo</li>
-        <li>avanza</li>
-      </ul>
+  </div>
+</body>
 
-      <!-- ordered list -->
-      <p>Daftar motor punya saya :</p>
-      <ol type="i" start="10" style="margin: 20px">
-        <li>Ninja</li>
-        <li>NSR</li>
-        <li>v-xion</li>
-      </ol>
-    </div>
-
-    <!-- area (div vs span) -->
-    <div class="container bg-white" id="namaId">
-      <div class="card">
-        <h4>Kartu 1</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-          perspiciatis corrupti odio natus similique ullam praesentium velit,
-          quam, distinctio minima molestiae iure amet voluptatibus!
-          Necessitatibus sequi fugit quis laboriosam veniam.
-        </p>
-      </div>
-      <div class="card">
-        <p>Kartu 1</p>
-        <p>
-          Lorem ipsum dolor sit,
-          <span style="background-color: #0088cc">Lorem, ipsum.</span> amet
-          consectetur adipisicing elit. Dolorum, fuga!
-        </p>
-      </div>
-    </div>
-
-    <!-- multimedia -->
-    <div class="container">
-      Audio Music
-      <audio
-        controls
-        src="http://www.sousound.com/music/healing/healing_01.mp3"
-      ></audio>
-
-      <video
-        controls autoplay
-        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-      ></video>
-
-    
-    </div>
-  </body>
 </html>
