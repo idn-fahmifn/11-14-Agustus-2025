@@ -1,151 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-      .container {
-        width: 80dvw;
-        border: 1px solid #333;
-        padding: 20px;
-        margin: 20px;
-        background-color: #f3f3f3;
-        display: flex;
-        justify-content: center;
-      }
-      .card {
-        width: 40%;
-        padding: 20px;
-        background-color: #ffff;
-        border-radius: 8px;
-      }
-      .form-group {
-        width: 100%;
-        margin-top: 16px;
-      }
+        .container {
+            width: 80dvw;
+            border: 1px solid #333;
+            padding: 20px;
+            margin: 20px;
+            background-color: #f3f3f3;
+            display: flex;
+            justify-content: center;
+        }
 
-      label,
-      .form-control, .button-submit {
-        width: 100%;
-      }
+        .card {
+            width: 40%;
+            padding: 20px;
+            background-color: #ffff;
+            border-radius: 8px;
+        }
 
-      label {
-        color: #0088cc;
-      }
+        .form-group {
+            width: 100%;
+            margin-top: 16px;
+        }
 
-      .form-control {
-        padding: 10px 5px;
-        border-radius: 4px;
-        border: #646464 1px solid;
-        margin-top: 8px;
-      }
-      .button-submit{
-        padding: 8px 5px;
-        background-color: #0088cc;
-        border: transparent;
-      }
+        label,
+        .form-control,
+        .button-submit {
+            width: 100%;
+        }
+
+        label {
+            color: #0088cc;
+        }
+
+        .form-control {
+            padding: 10px 5px;
+            border-radius: 4px;
+            border: #646464 1px solid;
+            margin-top: 8px;
+        }
+
+        .button-submit {
+            padding: 8px 5px;
+            background-color: #0088cc;
+            border: transparent;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- control + / untuk komentar -->
 
     <div class="container">
-      <div class="card">
-        <form action="" method="post">
-          <div class="form-group">
-            <label for="">Nama Depan</label>
-            <input
-              type="text"
-              class="form-control"
-              name="nama_depan"
-              required
-              placeholder="Masukan nama depan"
-            />
-          </div>
-          <div class="form-group">
-            <label for="">Nama Belakang</label>
-            <input
-              type="text"
-              class="form-control"
-              name="nama_belakang"
-              required
-              placeholder="Masukan nama belakang"
-            />
-          </div>
-          <div class="form-group">
-            <label for="">Jurusan</label>
-            <select name="jurusan" id="" class="form-control">
-              <option value="Teknik Informatika">Teknik Informatika</option>
-              <option value="Sistem Informatika">Sistem Informatika</option>
-              <option value="Ilmu Komputer">Ilmu Komputer</option>
-              <option value="Teknik Informatika">Teknik Informatika</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <button type="submit" class="button-submit">Daftar</button>
-          </div>
-        </form>
-      </div>
+        <div class="card">
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="">Nama Depan</label>
+                    <input type="text" class="form-control" name="nama_depan" required
+                        placeholder="Masukan nama depan" />
+                </div>
+                <div class="form-group">
+                    <label for="">Nama Belakang</label>
+                    <input type="text" class="form-control" name="nama_belakang" required
+                        placeholder="Masukan nama belakang" />
+                </div>
+                <div class="form-group">
+                    <label for="">Kuota pendaftara</label>
+                    <input type="range" class="form-control" min="0" max="100" name="nama_belakang" required
+                        placeholder="Masukan nama belakang" />
+                </div>
+                <div class="form-group">
+                    <label for="">Jurusan</label>
+                    <select name="jurusan" id="" class="form-control">
+                        <option value="Teknik Informatika">Teknik Informatika</option>
+                        <option value="Sistem Informatika">Sistem Informatika</option>
+                        <option value="Ilmu Komputer">Ilmu Komputer</option>
+                        <option value="Teknik Informatika">Teknik Informatika</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="button-submit">Daftar</button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <div class="container">
-      <form action="#">
-        <div class="form-group">
-          <label for="">Nama Depan</label>
-          <input
-            type="text"
-            name="nama_depan"
-            class="nama_class"
-            required
-            placeholder="masukan nama anda"
-          />
-        </div>
-        <div class="form-group">
-          <label for="">Nama Belakang</label>
-          <input
-            type="text"
-            name="nama_belakang"
-            class="nama_class"
-            required
-            placeholder="masukan nama anda"
-          />
-        </div>
-        <div class="form-group">
-          <label for="">Upload Berkas</label>
-          <input
-            type="file"
-            name="nama_depan"
-            class="nama_class"
-            required
-            placeholder="masukan nama anda"
-          />
-        </div>
-        <div class="form-group">
-          <label for="">Nama Depan</label>
-          <select name="jurusan" required>
-            <option value="sistem informasi">Sistem Informasi</option>
-            <option value="Teknik Informatika">
-              Teknik Informatika (Kelas Malam)
-            </option>
-            <option value="Desain Komunikasi Visual">
-              Desain Komunikasi Visual (Kelas Malam)
-            </option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="">Deskripsi</label>
-          <textarea name="desc" required id=""></textarea>
-        </div>
-        <div class="form-group">
-          <button type="submit">Daftar</button>
-        </div>
-      </form>
+        <form action="#">
+            <div class="form-group">
+                <label for="">Nama Depan</label>
+                <input type="text" name="nama_depan" class="nama_class" required placeholder="masukan nama anda" />
+            </div>
+            <div class="form-group">
+                <label for="">Nama Belakang</label>
+                <input type="text" name="nama_belakang" class="nama_class" required placeholder="masukan nama anda" />
+            </div>
+            <div class="form-group">
+                <label for="">Upload Berkas</label>
+                <input type="file" name="nama_depan" class="nama_class" required placeholder="masukan nama anda" />
+            </div>
+            <div class="form-group">
+                <label for="">Nama Depan</label>
+                <select name="jurusan" required>
+                    <option value="sistem informasi">Sistem Informasi</option>
+                    <option value="Teknik Informatika">
+                        Teknik Informatika (Kelas Malam)
+                    </option>
+                    <option value="Desain Komunikasi Visual">
+                        Desain Komunikasi Visual (Kelas Malam)
+                    </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="">Deskripsi</label>
+                <textarea name="desc" required id=""></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Daftar</button>
+            </div>
+        </form>
     </div>
-  </body>
+</body>
+
 </html>
