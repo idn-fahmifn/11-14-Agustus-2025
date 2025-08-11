@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 80dvw;
+        border: 1px solid #333;
+        padding: 20px;
+        margin: 20px;
+        background-color: #f3f3f3;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- control + / untuk komentar -->
+    <div class="container">
+
+    </div>
+
+    <div class="container">
+        <form action="#">
+            <div class="form-group">
+                <label for="">Nama Depan</label>
+                <input type="text" name="nama_depan" class="nama_class" required placeholder="masukan nama anda">
+            </div>
+            <div class="form-group">
+                <label for="">Nama Belakang</label>
+                <input type="text" name="nama_belakang" class="nama_class" required placeholder="masukan nama anda">
+            </div>
+            <div class="form-group">
+                <label for="">Upload Berkas</label>
+                <input type="file" name="nama_depan" class="nama_class" required placeholder="masukan nama anda">
+            </div>
+            <div class="form-group">
+                <label for="">Nama Depan</label>
+                <select name="jurusan" required >
+                    <option value="sistem informasi">Sistem Informasi</option>
+                    <option value="sistem informasi">Teknik Informatika</option>
+                    <option value="desain komunikasi visual">Desain Komunikasi Visual</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="">Deskripsi</label>
+                <textarea name="desc" required id=""></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Daftar</button>
+            </div>
+        </form>
+    </div>
+
+
+  </body>
+</html>
