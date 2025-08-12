@@ -37,29 +37,61 @@
         font-size: 1.7rem;
         font-weight: 900;
       }
-      .card{
-        width: 20%;
+      .card {
+        /* width: 100%; */
         border: #3333 solid 0.5px;
         padding: 10px;
         margin: 10px 30px;
         border-radius: 8px;
         border-style: dashed;
       }
+      .d-block{
+        width: 50%;
+        background-color: aliceblue;
+        display: block;
+        padding: 10px;
+        margin: 10px;
+      }
     </style>
   </head>
   <body>
+    <!-- css Layouting -->
+    <!-- display  -->
+    <div class="container">
+        <div class="card">
+            <span class="d-block">Ini adalah elemen display block</span>
+            <span class="d-block">Display block akan menguasai 1 baris penuh di setiap elemennya.</span>
+            <div class="d-block"> 
+                <p>Display block</p>
+                <ol style="margin: 20px;">
+                    <li>ukuran bisa dicustom</li>
+                    <li>menguasai 1 baris</li>
+                    <li>berlaku padding dan margin</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- box-model -->
     <div class="container">
       <div class="card">
         <div class="card-title">Box Model</div>
         <div class="card-body">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi qui ipsam atque, explicabo ea illo error non ipsum eaque porro.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            qui ipsam atque, explicabo ea illo error non ipsum eaque porro.
+          </p>
         </div>
       </div>
       <div class="card">
         <div class="card-title">Lorem, ipsum dolor.</div>
         <div class="card-body">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi qui ipsam atque, explicabo ea illo error non ipsum eaque porro.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            qui ipsam atque, explicabo ea illo error non ipsum eaque porro.
+          </p>
         </div>
       </div>
     </div>
