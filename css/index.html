@@ -41,7 +41,7 @@
         /* width: 100%; */
         border: #3333 solid 0.5px;
         padding: 10px;
-        margin: 10px 30px;
+        margin: 10px 5px;
         border-radius: 8px;
         border-style: dashed;
       }
@@ -52,11 +52,18 @@
         padding: 10px;
         margin: 10px;
       }
+      .d-inline{
+        display: inline;
+        background-color: #0088cc70;
+        padding: 10px;
+        margin: 10px;
+      }
     </style>
   </head>
   <body>
     <!-- css Layouting -->
     <!-- display  -->
+     <!-- display block -->
     <div class="container">
         <div class="card">
             <span class="d-block">Ini adalah elemen display block</span>
@@ -72,7 +79,22 @@
         </div>
     </div>
 
-
+    <!-- display inline -->
+     <div class="container">
+        <div class="card">
+            <span class="d-inline">Ini adalah display inline</span>
+            <span class="d-inline">Inline akan mengambil 1 baris dan ukurannya sesuai konten</span>
+        </div>
+        <div class="card">
+            <div class="d-block">
+                <span>Display Inline</span>
+                <ol style="margin: 20px;"">
+                    <li>ukuran tidak bisa diatur, akan mengikuti ukuran dari kontennya</li>
+                    <li>padding berlaku, margin hanya sumbu-X (kiri dan kanan)</li>
+                </ol>
+            </div>
+        </div>
+     </div>
 
     <!-- box-model -->
     <div class="container">
