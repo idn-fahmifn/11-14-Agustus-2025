@@ -94,6 +94,28 @@
         padding: 10px;
         background-color: #0088cc60;
       }
+
+      .grid-container{
+        width: 100%;
+        min-height: 100px;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+      }
+      .grid-item{
+        background-color: aqua;
+        padding: 30px;
+      }
+
+      @media screen and (min-width: 768px) {
+        .card-flex{
+          background-color: #0088cc;
+        }
+      }
+
+
+
     </style>
   </head>
   <body>
@@ -220,6 +242,18 @@
         <div class="card-flex">Ini adalah kartu</div>
         <div class="card-flex">Ini adalah kartu</div>
         <div class="card-flex">Ini adalah kartu</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="grid-container">
+        <div class="grid-item">Item Grid</div>
+        <div class="grid-item">Item Grid</div>
+        <div class="grid-item">Item Grid</div>
+        <div class="grid-item">Item Grid</div>
+        <div class="grid-item">Item Grid</div>
+        <div class="grid-item">Item Grid</div>
+        <div class="grid-item">Item Grid</div>
       </div>
     </div>
 
