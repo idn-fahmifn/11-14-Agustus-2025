@@ -31,7 +31,14 @@
         border-radius: 8px;
         font-weight: 400;
         text-align: justify;
+        transition: .7s linear;
       }
+
+      .card-1:hover{
+        background-color: #0088cc;
+        transform: scale(1.2);
+      }
+
       .title {
         font-family: "Imperial Script", cursive;
         font-size: 1.7rem;
@@ -78,7 +85,7 @@
         margin: 10px;
         visibility: hidden;
       }
-      .d-flex{
+      .d-flex {
         width: 100%;
         min-height: 100px;
         display: flex;
@@ -86,7 +93,7 @@
         flex-wrap: wrap;
         background-color: #ff000060;
       }
-      .card-flex{
+      .card-flex {
         width: 200px;
         height: 50px;
         flex: 1 1 200px;
@@ -95,7 +102,11 @@
         background-color: #0088cc60;
       }
 
-      .grid-container{
+      .card-flex{
+        background-color: aquamarine;
+      }
+
+      .grid-container {
         width: 100%;
         min-height: 100px;
         padding: 10px;
@@ -103,19 +114,25 @@
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 5px;
       }
-      .grid-item{
+      .grid-item {
         background-color: aqua;
         padding: 30px;
       }
 
-      @media screen and (min-width: 768px) {
-        .card-flex{
+      @media screen and (max-width: 768px) {
+        .card-flex {
           background-color: #0088cc;
+        }
+        .grid-container {
+          grid-template-columns: repeat(2, 1fr);
         }
       }
 
-
-
+      @media screen and (max-width: 425px) {
+        .grid-container {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
     </style>
   </head>
   <body>
@@ -230,6 +247,8 @@
         <div class="card-flex">Ini adalah kartu</div>
         <div class="card-flex">Ini adalah kartu</div>
         <div class="card-flex">Ini adalah kartu</div>
+        <div class="card-flex">Ini adalah baru</div>
+        <div class="card-flex">Ini adalah kartu</div>
         <div class="card-flex">Ini adalah kartu</div>
         <div class="card-flex">Ini adalah kartu</div>
         <div class="card-flex">Ini adalah kartu</div>
@@ -256,6 +275,5 @@
         <div class="grid-item">Item Grid</div>
       </div>
     </div>
-
   </body>
 </html>
