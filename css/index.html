@@ -119,6 +119,42 @@
         padding: 30px;
       }
 
+      .bounce{
+        animation: bounce 2s ease-in-out infinite alternate;
+      }
+
+      .change-color{
+        animation: changeColor 3s ease-in-out infinite alternate;
+      }
+
+
+      @keyframes bounce {
+        from{
+          transform: translate(0);
+        } to {
+          transform: translateY(-100px);
+          background-color: #ff0000;
+        }
+      }
+
+      @keyframes changeColor {
+        0%{
+          background-color: #0088cc;
+        }
+        25%{
+          background-color: #1fcc00;
+        }
+        50%{
+          background-color: #ccb400;
+        }
+        75%{
+          background-color: #ff0000;
+        }
+        100%{
+          background-color: #0088cc;
+        }
+      }
+
       @media screen and (max-width: 768px) {
         .card-flex {
           background-color: #0088cc;
@@ -272,6 +308,14 @@
         <div class="grid-item">Item Grid</div>
         <div class="grid-item">Item Grid</div>
         <div class="grid-item">Item Grid</div>
+        <div class="grid-item">Item Grid</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="grid-container">
+        <div class="grid-item bounce">Item Grid</div>
+        <div class="grid-item change-color">Item Grid</div>
         <div class="grid-item">Item Grid</div>
       </div>
     </div>
