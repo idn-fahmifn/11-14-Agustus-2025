@@ -285,7 +285,7 @@ function jalankanKalkulator() {
   // operasinya
   let operasi = prompt("Masukan operasi : tambah, kurang, bagi, kali");
 
-  let hasil;
+  let hasil; //undifined
 
   switch (operasi.toLowerCase()) {
     case "tambah":
@@ -307,3 +307,21 @@ function jalankanKalkulator() {
   // menampilkan outputnya : 
   alert(`Hasil dari opersi ${operasi} adalah : ${hasil}`)
 }
+
+
+let luar = "ini adalahh scope luar"
+
+function functinLuar(){
+
+  let private = "ini harusnya gabisa diakses"
+
+  // luar = 'Ini udah diubah'
+  console.log(luar)
+}
+
+functinLuar()
+// console.log(private)
+
+
+
+
