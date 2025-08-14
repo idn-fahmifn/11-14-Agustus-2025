@@ -228,7 +228,28 @@
                 const dataProduct = await response.json();
 
                 dataProduct.forEach((item) => {
-                    console.log(item)
+                    const kolom = document.createElement("div");
+                    kolom.setAttribute('class', 'col-md-3 my-4');
+
+                    const card = document.createElement("div");
+                    card.setAttribute('class', 'card p-4');
+
+                    const imgProduct = document.createElement("img");
+                    imgProduct.setAttribute('src', item.image);
+                    imgProduct.setAttribute('class', 'w-full');
+                    imgProduct.setAttribute('alt', 'gambar produk');
+
+                    const cardTitle = document.createElement("div");
+                    cardTitle.setAttribute('class', 'card-title mt-2 h5');
+                    cardTitle.textContent = item.product_name
+
+                    const price = document.createElement("p");
+                    price.setAttribute('class', 'text-success');
+                    price.textContent = item.product_name
+
+
+                    
+                    console.log(price)
                 })
 
 
