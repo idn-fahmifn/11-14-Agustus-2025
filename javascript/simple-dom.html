@@ -34,6 +34,7 @@
 
     <div class="container">
         <button type="button" id="btnChange">Ubah Tampilan</button>
+        <div class="newelement" id="new"></div>
         <div class="alert" id="alert">
             bentuk masih default.
         </div>
@@ -50,6 +51,7 @@
         const container = document.querySelector('.container'); //memanggil class *recomended
         // console.log(container)
         const alert = document.getElementById('alert');
+        const newElement = document.getElementById('new');
 
         // manipulasi isi pada tag
         alert.textContent = "ini adalah elemen yang sudah diubah."
@@ -62,6 +64,27 @@
         image.setAttribute("src", "https://photographylife.com/wp-content/uploads/2023/05/Nikon-Z8-Official-Samples-00002.jpg")
         image.setAttribute("width", "100")
         image.style.margin = "30px"
+
+        // menambahkan element
+        // iner html
+        newElement.innerHTML = `<h1>Hallo, ini adalah elemen baru dengan inner html</h1>`
+
+        const elementBaru = document.createElement("h1")
+        elementBaru.textContent = "ini adalah text yang ditulis di elemen baru"
+        alert.appendChild(elementBaru)
+
+        container.appendChild(elementBaru)
+
+        // console.log(elementBaru)
+
+        // event Listener 
+        buttonChange.addEventListener("click", function(){
+            container.style.background = '#00ff00'
+            const elementUpdate = document.createElement('span')
+            elementUpdate.textContent = "Container berhasil diubah";
+
+            container.appendChild(elementUpdate)
+        })
         
 
 
