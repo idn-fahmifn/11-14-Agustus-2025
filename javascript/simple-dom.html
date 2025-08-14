@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .container{
+            width: 80dvw;
+            min-height: 10dvw;
+            background-color: #f9f9f9;
+            border: 0.5px #4444 solid;
+            margin: 30px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .alert{
+            width: 80%;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #0088cc70;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <button type="button" id="btnChange">Ubah Tampilan</button>
+        <div class="alert" id="alert">
+            bentuk masih default.
+        </div>
+
+        <img src="" alt="Gambar saya" id="myImage">
+
+    </div>
+    
+
+    <script>
+
+        const buttonChange = document.getElementById('btnChange'); //memanggil elemen ID
+        const image = document.getElementById('myImage'); //memanggil elemen ID
+        const container = document.querySelector('.container'); //memanggil class *recomended
+        // console.log(container)
+        const alert = document.getElementById('alert');
+
+        // manipulasi isi pada tag
+        alert.textContent = "ini adalah elemen yang sudah diubah."
+
+        // mengubah style
+        alert.style.background = "#ff0000"
+        alert.style.color = "#ffff"
+
+        // menambahkan atribut
+        image.setAttribute("src", "https://photographylife.com/wp-content/uploads/2023/05/Nikon-Z8-Official-Samples-00002.jpg")
+        image.setAttribute("width", "100")
+        image.style.margin = "30px"
+        
+
+
+
+
+
+    </script>
+</body>
+</html>
