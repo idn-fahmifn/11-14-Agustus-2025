@@ -164,7 +164,9 @@
               nesciunt tempore exercitationem.
             </p>
             <div class="text-muted" style="text-align: justify">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum saepe incidunt error. Recusandae laudantium quis possimus minima, a facilis esse?
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
+              saepe incidunt error. Recusandae laudantium quis possimus minima,
+              a facilis esse?
             </div>
           </div>
           <div class="col-lg-6 px-5">
@@ -172,19 +174,16 @@
               <div class="col-lg-4">
                 <div class="card p-4 bg-success bg-opacity-50">
                   <div class="card-title">Original</div>
-                  
                 </div>
               </div>
               <div class="col-lg-4">
                 <div class="card p-4 bg-info bg-opacity-50">
                   <div class="card-title">Cheapest</div>
-                  
                 </div>
               </div>
               <div class="col-lg-4">
                 <div class="card p-4 bg-warning bg-opacity-50">
                   <div class="card-title">Fast Delivery</div>
-                  
                 </div>
               </div>
             </div>
@@ -193,74 +192,74 @@
       </div>
     </section>
 
-    <section class="mx-5 bg-secondary bg-opacity-25 mb-5" id="product" style="min-height: 20dvw;">
-        <div class="container-fluid">
-            <div class="row" id="rowData">
-                <div class="col-md-3 my-4">
-                    <div class="card p-4">
-                        <img src="https://bobobobo.com/cdn/shop/articles/Artikel-Adidas-Desktop.webp?crop=center&height=1200&v=1683687165&width=1200" class="w-full" alt="">
-                        <div class="card-title mt-2 h5">
-                            Nama Produk
-                        </div>
-                        <p class="text-success">IDR. 50000</p>
-                        <a href="#" class="btn btn-success">Beli</a>
-                    </div>
-                </div>
+    <section
+      class="mx-5 bg-secondary bg-opacity-25 mb-5"
+      id="product"
+      style="min-height: 20dvw"
+    >
+      <div class="container-fluid">
+        <div class="row" id="rowData">
+          <div class="col-md-3 my-4">
+            <div class="card p-4">
+              <img
+                src="https://bobobobo.com/cdn/shop/articles/Artikel-Adidas-Desktop.webp?crop=center&height=1200&v=1683687165&width=1200"
+                class="w-full"
+                alt=""
+              />
+              <div class="card-title mt-2 h5">Nama Produk</div>
+              <p class="text-success">IDR. 50000</p>
+              <a href="#" class="btn btn-success">Beli</a>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <script>
-        const rowData = document.getElementById('rowData');
+      const rowData = document.getElementById("rowData");
 
-        async function showData() {
-            try {
+      async function showData() {
+        try {
+          const api = "https://689db028ce755fe697898a5f.mockapi.io/product";
+          const response = await fetch(api);
 
-                const api ="https://689db028ce755fe697898a5f.mockapi.io/product";
-                const response = await fetch(api);
+          // kondisi jika data gagal dipanggil
+          if (!response.ok) {
+            console.log("error");
+            throw new Error(`Bermasalah : ${response.status}`);
+          }
 
-                // kondisi jika data gagal dipanggil
-                if(!response.ok){
-                    console.log("error");
-                    throw new Error(`Bermasalah : ${response.status}` )
-                }
+          const dataProduct = await response.json();
 
-                const dataProduct = await response.json();
+          dataProduct.forEach((item) => {
+            const kolom = document.createElement("div");
+            kolom.setAttribute("class", "col-md-3 my-4");
 
-                dataProduct.forEach((item) => {
-                    const kolom = document.createElement("div");
-                    kolom.setAttribute('class', 'col-md-3 my-4');
+            const card = document.createElement("div");
+            card.setAttribute("class", "card p-4");
 
-                    const card = document.createElement("div");
-                    card.setAttribute('class', 'card p-4');
+            const imgProduct = document.createElement("img");
+            imgProduct.setAttribute("src", item.image);
+            imgProduct.setAttribute("class", "w-full");
+            imgProduct.setAttribute("alt", "gambar produk");
 
-                    const imgProduct = document.createElement("img");
-                    imgProduct.setAttribute('src', item.image);
-                    imgProduct.setAttribute('class', 'w-full');
-                    imgProduct.setAttribute('alt', 'gambar produk');
+            const cardTitle = document.createElement("div");
+            cardTitle.setAttribute("class", "card-title mt-2 h5");
+            cardTitle.textContent = item.product_name;
 
-                    const cardTitle = document.createElement("div");
-                    cardTitle.setAttribute('class', 'card-title mt-2 h5');
-                    cardTitle.textContent = item.product_name
+            const price = document.createElement("p");
+            price.setAttribute("class", "text-success");
+            price.textContent = `IDR. ${item.price}`;
 
-                    const price = document.createElement("p");
-                    price.setAttribute('class', 'text-success');
-                    price.textContent = item.product_name
+            const beli = document.createElement("a");
+            beli.setAttribute("class", "btn btn-success");
+            beli.textContent = "Beli Sekarang"
+            console.log(beli);
+          });
+        } catch {}
+      }
 
-
-                    
-                    console.log(price)
-                })
-
-
-            } catch{
-
-            }
-        }
-
-        showData()
-
-
+      showData();
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
