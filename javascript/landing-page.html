@@ -199,7 +199,7 @@
     >
       <div class="container-fluid">
         <div class="row" id="rowData">
-          <div class="col-md-3 my-4">
+          <!-- <div class="col-md-3 my-4">
             <div class="card p-4">
               <img
                 src="https://bobobobo.com/cdn/shop/articles/Artikel-Adidas-Desktop.webp?crop=center&height=1200&v=1683687165&width=1200"
@@ -210,7 +210,7 @@
               <p class="text-success">IDR. 50000</p>
               <a href="#" class="btn btn-success">Beli</a>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -254,7 +254,16 @@
             const beli = document.createElement("a");
             beli.setAttribute("class", "btn btn-success");
             beli.textContent = "Beli Sekarang"
-            console.log(beli);
+
+            rowData.appendChild(kolom)
+            kolom.appendChild(card)
+            card.appendChild(imgProduct)
+            card.appendChild(cardTitle)
+            card.appendChild(price)
+            card.appendChild(beli)
+
+
+
           });
         } catch {}
       }
