@@ -197,32 +197,113 @@ switch (hariIni) {
 // Looping
 // for loop
 for (let i = 1; i <= 10; i++) {
-    console.log("saya mengulang sebanyak", i)
+  console.log("saya mengulang sebanyak", i);
 }
 
-buah.push('Leci')
+buah.push("Leci");
 
-for(let i = 0; i < buah.length; i++) {
-    console.log("Kemarin saya beli buah ", buah[i])
+for (let i = 0; i < buah.length; i++) {
+  console.log("Kemarin saya beli buah ", buah[i]);
 }
-
 
 // while
 let loncat = 0;
-while (loncat <= 10){
-    console.log('Loncat terus sebanyak', loncat)
-    loncat++
+while (loncat <= 10) {
+  console.log("Loncat terus sebanyak", loncat);
+  loncat++;
 }
 
 // For Of
-for(const item of buah){
-    console.log("Saya punya buah", item)
+for (const item of buah) {
+  console.log("Saya punya buah", item);
 }
 
-for(const properti in biodata){
-    console.log(properti, biodata[properti])
+for (const properti in biodata) {
+  console.log(properti, biodata[properti]);
 }
 
+// function biasa
+function klik() {
+  prompt("Hari ini mau belajar apa?");
+}
 
+// function expression
+const contoh = function (parameter) {
+  // blok kode yang akan digunakan.
+};
 
+const functionArrow = (parameter) => {
+  // ini block code
+};
 
+function sapa(waktu, nama) {
+  console.log(`Hallo, selamat ${waktu}, Mr/Mrs ${nama}`);
+}
+
+sapa("pagi", "Fahmi");
+
+let persegi = function (sisi) {
+  return sisi * sisi;
+};
+
+let angka = persegi(30);
+console.log("Rumus Luas Persegi adalah : ", angka);
+
+// simple kalkulator
+function penjumlahan(angka1, angka2) {
+  return Number(angka1) + Number(angka2);
+}
+
+function pengurangan(angka1, angka2) {
+  return angka1 - angka2;
+}
+
+function perkalian(angka1, angka2) {
+  return angka1 * angka2;
+}
+
+function pembagian(angka1, angka2) {
+  if (angka2 === 0) {
+    return "Ganti angke ke-2 nya";
+  }
+  return angka1 / angka2;
+}
+
+function jalankanKalkulator() {
+  // menampilkan prompt
+
+  let angka1 = prompt("Masukan angka pertama (Wajib Angka)");
+  let angka2 = prompt("Masukan angka kedua (Wajib Angka)");
+
+  // angka1 = parseFloat(angka1)
+
+  // validasi wajib angka
+  if (isNaN(angka1) || isNaN(angka2)) {
+    alert("Masukan Angka!");
+  }
+
+  // operasinya
+  let operasi = prompt("Masukan operasi : tambah, kurang, bagi, kali");
+
+  let hasil;
+
+  switch (operasi.toLowerCase()) {
+    case "tambah":
+      hasil = penjumlahan(angka1, angka2);
+      break;
+    case "kurang":
+      hasil = pengurangan(angka1, angka2);
+      break;
+    case "kali":
+      hasil = perkalian(angka1, angka2);
+      break;
+    case "bagi":
+      hasil = pembagian(angka1, angka2);
+      break;
+    default:
+      hasil = "Operasi tidak ada";
+      break;
+  }
+  // menampilkan outputnya : 
+  alert(`Hasil dari opersi ${operasi} adalah : ${hasil}`)
+}
